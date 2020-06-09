@@ -23,7 +23,7 @@
 
 require_once(dirname(__FILE__) . '/../../config.php');
 require_once("lib.php");
-require_once($CFG->libdir . '/eventslib.php');
+//require_once($CFG->libdir . '/eventslib.php');
 require_once($CFG->libdir . '/enrollib.php');
 require_once($CFG->libdir . '/filelib.php');
 global $CFG, $_SESSION, $USER, $DB, $OUTPUT;
@@ -138,9 +138,8 @@ if ($_GET['Status'] == 'OK') {
         $mailadmins   = $plugin->get_config('mailadmins');
         $shortname = format_string($course->shortname, true, array('context' => $context));
 
-
+        $a = new stdClass();
         if (!empty($mailstudents)) {
-            $a = new stdClass();
             $a->coursename = format_string($course->fullname, true, array('context' => $coursecontext));
             $a->profileurl = "$CFG->wwwroot/user/view.php?id=$user->id";
 
