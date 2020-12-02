@@ -72,6 +72,8 @@ if ($res->Status == 100) {
     //برای استفاده از زرین گیت باید ادرس به صورت زیر تغییر کند:
     if ($use_zaringate) {
         Header('Location: https://www.zarinpal.com/pg/StartPay/'.$res->Authority.'/ZarinGate');
+    } elseif ($testing == 0) {
+        Header('Location: https://sandbox.zarinpal.com/pg/StartPay/'.$res->Authority);
     }else{
         Header('Location: https://www.zarinpal.com/pg/StartPay/'.$res->Authority);
     }
