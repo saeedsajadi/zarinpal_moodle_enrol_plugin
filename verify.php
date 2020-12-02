@@ -23,7 +23,7 @@
 
 require_once(dirname(__FILE__) . '/../../config.php');
 require_once("lib.php");
-//require_once($CFG->libdir . '/eventslib.php');
+// require_once($CFG->libdir . '/eventslib.php'); // doesn't work on the lastest version of moodle
 require_once($CFG->libdir . '/enrollib.php');
 require_once($CFG->libdir . '/filelib.php');
 global $CFG, $_SESSION, $USER, $DB, $OUTPUT;
